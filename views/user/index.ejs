@@ -29,6 +29,21 @@
       <!-- panel -->
       <div class="jplist-panel box panel-top">
 
+        <!-- filter select -->
+        <select
+          class="jplist-select"
+          data-control-type="filter-select"
+          data-control-name="category-filter"
+          data-control-action="filter">
+
+          <option data-path="default">Filter by category</option>
+          <option data-path=".architecture">Architecture</option>
+          <option data-path=".christmas">Christmas</option>
+          <option data-path=".food">Food</option>
+          <option data-path=".nature">Nature</option>
+          <option data-path=".other">Other</option>
+        </select>
+
         <!-- filter by title -->
         <div class="text-filter-box">
 
