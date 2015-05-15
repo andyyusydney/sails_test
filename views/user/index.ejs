@@ -29,6 +29,46 @@
       <!-- panel -->
       <div class="jplist-panel box panel-top">
 
+        <!-- filter by title -->
+        <div class="text-filter-box">
+
+          <i class="fa fa-pencil jplist-icon"></i>
+
+          <!--[if lt IE 10]>
+          <div class="jplist-label">Filter by Title:</div>
+          <![endif]-->
+
+          <input
+            data-path=".title"
+            type="text"
+            value=""
+            placeholder="Filter by Title"
+            data-control-type="textbox"
+            data-control-name="title-filter"
+            data-control-action="filter"
+            />
+        </div>
+
+        <!-- filter by description -->
+        <div class="text-filter-box">
+
+          <i class="fa fa-pencil jplist-icon"></i>
+
+          <!--[if lt IE 10]>
+          <div class="jplist-label">Filter by Description:</div>
+          <![endif]-->
+
+          <input
+            data-path=".desc"
+            type="text"
+            value=""
+            placeholder="Filter by Description"
+            data-control-type="textbox"
+            data-control-name="desc-filter"
+            data-control-action="filter"
+            />
+        </div>
+
         <select
           class="jplist-select"
           data-control-type="items-per-page-select"
