@@ -1,0 +1,22 @@
+<% _.each(data, function (item){ %>
+<div class="list-item box">
+
+  <!-- img -->
+  <div class="img">
+    <img src="/js/jplist/free-pagination-bundle/<%-item.Image%>" alt="" title=""/>
+  </div>
+
+  <!-- data -->
+  <div class="block">
+    <p class="date"><%- item.createdAt%></p>
+    <p class="title"><%- item.Title%></p>
+    <p class="desc"><%- item.Description%></p>
+    <p class="theme">
+      <span class="other"><%- item.Keyword1%></span>
+      <span class="group1"><%- item.keyword2%></span>
+    </p>
+    <p class="like"><%- item.Likes%> Likes</p>
+  </div>
+</div>
+<% }); %>
+

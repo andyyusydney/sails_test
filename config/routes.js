@@ -38,6 +38,10 @@ module.exports.routes = {
   'get /user': {
     controller: 'UserController',
     action: 'index'
+  },
+  'post /jplist': {
+    controller: 'JplistController',
+    action: 'index'
   }
 
   /***************************************************************************

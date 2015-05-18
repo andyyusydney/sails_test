@@ -904,10 +904,42 @@
 <script>
   $('document').ready(function(){
 
+    var $list = $('#demo .list');
+
     $('#demo').jplist({
       itemsBox: '.list'
-      ,itemPath: '.list-item'
-      ,panelPath: '.jplist-panel'
+      , itemPath: '.list-item'
+      , panelPath: '.jplist-panel'
+      , dataSource: {
+        type: 'server'
+        , server: {
+          //ajax settings
+          ajax: {
+            url: '/jplist'
+            , dataType: 'html'
+            , type: 'POST'
+            , cache: false
+          }
+          , serverOkCallback: function(serverData, statuses, ajax, response){
+            //server callback in case of success
+            console.log("response=", response);
+            console.log("$list=", $list);
+            $list.html(response.responseText);
+            $list.show();
+          }
+          , serverErrorCallback: function(statuses){
+            //server callback in case of fail
+            console.error("statuses=", statuses);
+          }
+        }
+
+        //render function for json + templates like handlebars, xml + xslt etc.
+        /*, render: function (dataItem, statuses) {
+          console.log("dataItem=", dataItem);
+          console.log("$list=", $list);
+          $list.html(dataItem.responseText);
+        }*/
+      }
     });
   });
 </script>
